@@ -3,10 +3,9 @@ import * as d3 from 'd3';
 import { tubeMap } from 'd3-tube-map';
 import data from './pubs.json';
 
-
 class Map extends Component {
   componentDidMount() {
-    const svg = d3.select(this.refs.map);
+    const container = d3.select(this.map);
 
     const width = 1600;
     const height = 1024;
@@ -21,14 +20,17 @@ class Map extends Component {
         left: width / 7,
       });
 
-    svg.datum(data).call(map);
+    container.datum(data).call(map);
   }
 
   render() {
     return (
-      <div style={{ height: '100%' }}>
-        <svg ref="map" style={{ width: '100%', height: '100%' }}></svg>
-      </div>
+      <div
+        ref={map => {
+          this.map = map;
+        }}
+        style={{ height: '100%' }}
+      />
     );
   }
 }

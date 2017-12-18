@@ -3,11 +3,7 @@ import Map from './Map';
 
 class App extends Component {
   render() {
-    return (
-      <div style={{ height: '100%' }}>
-        <Map />
-      </div>
-    );
+    return <Map />;
   }
 }
 
