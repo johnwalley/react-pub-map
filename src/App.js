@@ -8,7 +8,6 @@ import {
   Tooltip,
   ZoomControl,
 } from 'react-leaflet';
-import Control from 'react-leaflet-control';
 import RetinaImage from 'react-retina-image';
 import Autosuggest from 'react-autosuggest';
 import 'leaflet/dist/leaflet.css';
