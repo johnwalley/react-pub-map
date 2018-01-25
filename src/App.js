@@ -5,12 +5,11 @@ import {
   ImageOverlay,
   Rectangle,
   Circle,
-  Tooltip,
   ZoomControl,
 } from 'react-leaflet';
-import RetinaImage from 'react-retina-image';
-import Autosuggest from 'react-autosuggest';
+import Select from 'react-select';
 import 'leaflet/dist/leaflet.css';
+import 'react-select/dist/react-select.css';
 import './App.css';
 
 const imageUrl = require('./cambridge-pub-map.svg');
@@ -22,27 +21,10 @@ const DEFAULT_VIEWPORT = {
   zoom: 1,
 };
 
-const pubs = metadata;
-
-const getSuggestions = value => {
-  const inputValue = value.trim().toLowerCase();
-  const inputLength = inputValue.length;
-
-  return inputLength === 0
-    ? []
-    : pubs.filter(
-        lang => lang.label.toLowerCase().slice(0, inputLength) === inputValue
-      );
-};
-
-const getSuggestionValue = suggestion => suggestion.label;
-const renderSuggestion = suggestion => <div>{suggestion.label}</div>;
-
 class App extends Component {
   state = {
     viewport: DEFAULT_VIEWPORT,
     value: '',
-    suggestions: [],
   };
 
   onPubSelected = name => {
@@ -60,33 +42,17 @@ class App extends Component {
     this.setState({ viewport });
   };
 
-  onChange = (event, { newValue }) => {
+  updateValue = newValue => {
     this.setState({
-      value: newValue,
+      selectValue: newValue,
     });
-  };
 
-  onSuggestionsFetchRequested = ({ value }) => {
-    this.setState({
-      suggestions: getSuggestions(value),
-    });
-  };
-
-  onSuggestionsClearRequested = () => {
-    this.setState({
-      suggestions: [],
-    });
+    if (newValue !== null) {
+      this.onPubSelected(newValue);
+    }
   };
 
   render() {
-    const { value, suggestions } = this.state;
-
-    const inputProps = {
-      placeholder: 'Find a pub',
-      value,
-      onChange: this.onChange,
-    };
-
     return (
       <React.Fragment>
         <div
@@ -99,16 +65,25 @@ class App extends Component {
             zIndex: 10000,
           }}
         >
-          <Autosuggest
-            suggestions={suggestions}
-            onSuggestionSelected={(event, { suggestion }) =>
-              this.onPubSelected(suggestion.name)
-            }
-            onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-            onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-            getSuggestionValue={getSuggestionValue}
-            renderSuggestion={renderSuggestion}
-            inputProps={inputProps}
+          <Select
+            style={{ width: '240px' }}
+            id="pub-select"
+            ref={ref => {
+              this.select = ref;
+            }}
+            valueKey="name"
+            onBlurResetsInput={false}
+            onSelectResetsInput={false}
+            autoFocus
+            options={metadata}
+            simpleValue
+            clearable={true}
+            name="selected-pub"
+            value={this.state.selectValue}
+            onChange={this.updateValue}
+            searchable={true}
+            onValueClick={() => this.onPubSelected(this.state.selectValue)}
+            placeholder="Choose a pub..."
           />
         </div>
         <Map
