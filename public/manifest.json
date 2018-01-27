@@ -1,10 +1,25 @@
 {
   "short_name": "Pub Map",
-  "name": "Cambridge Pubs in the style of the London Underground Map",
+  "name": "Cambridge Pub Map",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "192x192",
+      "src": "/images/pubmap-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/pubmap-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/pubmap-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/pubmap-512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
