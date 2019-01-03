@@ -14,8 +14,8 @@ import './App.css';
 
 const imageUrl = require('./cambridge-pub-map.svg');
 const metadata = require('./cambridge-pub-map.json');
-const width = 1600;
-const height = 1000;
+const width = 715.6065;
+const height = 595.28;
 const DEFAULT_VIEWPORT = {
   center: [height / 2, width / 2],
   zoom: 1,
