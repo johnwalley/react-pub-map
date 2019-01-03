@@ -8,6 +8,7 @@ import {
   ZoomControl,
 } from 'react-leaflet';
 import Select from 'react-select';
+import Control from 'react-leaflet-control';
 import 'leaflet/dist/leaflet.css';
 import 'react-select/dist/react-select.css';
 import './App.css';
@@ -125,6 +126,9 @@ class App extends Component {
               />
             ))}
           <ZoomControl position="bottomright" />
+          <Control position="topright">
+            <a href="cambridge-pub-map.pdf">Download PDF</a>
+          </Control>
         </Map>
       </React.Fragment>
     );
