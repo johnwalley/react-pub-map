@@ -126,7 +126,7 @@ class App extends Component {
               />
             ))}
           <ZoomControl position="bottomright" />
-          <Control position="topright">
+          <Control position="bottomleft">
             <a href="cambridge-pub-map.pdf">Download PDF</a>
           </Control>
         </Map>
