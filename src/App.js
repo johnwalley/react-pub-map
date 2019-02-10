@@ -127,7 +127,9 @@ class App extends Component {
             ))}
           <ZoomControl position="bottomright" />
           <Control position="bottomleft">
-            <a href="cambridge-pub-map.pdf">Download PDF</a>
+            <a href="cambridge-pub-map.pdf" class="button">
+              Download PDF
+            </a>
           </Control>
         </Map>
       </React.Fragment>
