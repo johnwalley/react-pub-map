@@ -10,7 +10,6 @@ import {
 import Select from 'react-select';
 import Control from 'react-leaflet-control';
 import 'leaflet/dist/leaflet.css';
-import 'react-select/dist/react-select.css';
 import './App.css';
 
 const imageUrl = require('./cambridge-pub-map.svg');
@@ -45,11 +44,11 @@ class App extends Component {
 
   updateValue = newValue => {
     this.setState({
-      selectValue: newValue,
+      selectValue: newValue.name,
     });
 
     if (newValue !== null) {
-      this.onPubSelected(newValue);
+      this.onPubSelected(newValue.name);
     }
   };
 
@@ -64,10 +63,10 @@ class App extends Component {
             marginTop: 10,
             marginLeft: 10,
             zIndex: 10000,
+            width: 240,
           }}
         >
           <Select
-            style={{ width: '240px' }}
             id="pub-select"
             ref={ref => {
               this.select = ref;
@@ -83,7 +82,7 @@ class App extends Component {
             value={this.state.selectValue}
             onChange={this.updateValue}
             searchable={true}
-            onValueClick={() => this.onPubSelected(this.state.selectValue)}
+            onValueClick={() => this.onPubSelected(this.state.selectValue.name)}
             placeholder="Choose a pub..."
           />
         </div>
@@ -127,7 +126,7 @@ class App extends Component {
             ))}
           <ZoomControl position="bottomright" />
           <Control position="bottomleft">
-            <a href="cambridge-pub-map.pdf" class="button">
+            <a href="cambridge-pub-map.pdf" className="button">
               Download PDF
             </a>
           </Control>
