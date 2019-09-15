@@ -1,6 +1,6 @@
-# Cambridge Pub Map
+# React Pub Map
 
-Cambridge Pub Map is a website which lets you explore the pubs of Cambridge in the form of the iconic London Underground map.
+React Pub Map is a website which lets you explore the pubs of Cambridge in the form of the iconic London Underground map.
 
 <img width="256" alt="Cambridge Pub Map icon" src="public/images/pubmap-256x256.png">
 
