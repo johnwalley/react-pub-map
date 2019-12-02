@@ -6,7 +6,7 @@
     "leaflet": "^1.5.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-leaflet": "^2.4.0",
+    "react-leaflet": "^2.5.0",
     "react-retina-image": "^2.0.5",
     "react-leaflet-control": "^2.1.1",
     "react-scripts": "3.1.1",
