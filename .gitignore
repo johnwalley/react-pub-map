@@ -1,5 +1,9 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+/scripts/cambridge-pub-map.json
+/scripts/cambridge-pub-map.svg
+/scripts/cambridge-pub-map.pdf
+
 # dependencies
 /node_modules
 
