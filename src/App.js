@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useRef, useState } from 'react';
 import { CRS } from 'leaflet';
 import {
   Map,
@@ -21,119 +21,121 @@ const DEFAULT_VIEWPORT = {
   zoom: 1,
 };
 
-class App extends Component {
-  state = {
-    viewport: DEFAULT_VIEWPORT,
-    value: '',
-  };
+const App = () => {
+  const [viewport, setViewport] = useState(DEFAULT_VIEWPORT);
+  const [selectValue, setSelectValue] = useState('');
+  const select = useRef(null);
 
-  onPubSelected = name => {
+  const onPubSelected = name => {
     const pub = metadata.find(pub => pub.name === name);
     const point = [height - pub.y, pub.x];
 
-    this.setState({ viewport: { center: point, zoom: this.state.zoom } });
+    setViewport({ center: point });
   };
 
-  onClick = point => {
-    this.setState({ viewport: { center: point, zoom: this.state.zoom } });
+  const onClick = point => {
+    setViewport({ center: point });
   };
 
-  onViewportChanged = viewport => {
-    this.setState({ viewport });
+  const onViewportChanged = viewport => {
+    setViewport(viewport);
   };
 
-  updateValue = newValue => {
-    this.setState({
-      selectValue: newValue.name,
-    });
+  const updateValue = newValue => {
+    setSelectValue(newValue.name);
 
     if (newValue !== null) {
-      this.onPubSelected(newValue.name);
+      onPubSelected(newValue.name);
     }
   };
 
-  render() {
-    return (
-      <React.Fragment>
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            marginTop: 10,
-            marginLeft: 10,
-            zIndex: 10000,
-            width: 240,
-          }}
-        >
-          <Select
-            id="pub-select"
-            ref={ref => {
-              this.select = ref;
-            }}
-            valueKey="name"
-            onBlurResetsInput={false}
-            onSelectResetsInput={false}
-            autoFocus
-            options={metadata}
-            simpleValue
-            clearable={true}
-            name="selected-pub"
-            value={this.state.selectValue}
-            onChange={this.updateValue}
-            searchable={true}
-            onValueClick={() => this.onPubSelected(this.state.selectValue.name)}
-            placeholder="Choose a pub..."
+  return (
+    <React.Fragment>
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          marginTop: 10,
+          marginLeft: 10,
+          zIndex: 10000,
+          width: 240,
+        }}
+      >
+        <Select
+          id="pub-select"
+          ref={select}
+          valueKey="name"
+          onBlurResetsInput={false}
+          onSelectResetsInput={false}
+          autoFocus
+          options={metadata}
+          simpleValue
+          clearable={true}
+          name="selected-pub"
+          value={selectValue}
+          onChange={updateValue}
+          searchable={true}
+          onValueClick={() => onPubSelected(selectValue.name)}
+          placeholder="Choose a pub..."
+        />
+      </div>
+      <Map
+        crs={CRS.Simple}
+        viewport={viewport}
+        onViewportChanged={onViewportChanged}
+        maxZoom={2}
+        minZoom={0}
+        maxBounds={[
+          [0, 0],
+          [height, width],
+        ]}
+        attributionControl={false}
+        zoomControl={false}
+      >
+        <ImageOverlay
+          url={imageUrl}
+          bounds={[
+            [0, 0],
+            [height, width],
+          ]}
+        />
+        {metadata.map(pub => (
+          <Rectangle
+            key={pub.name}
+            bounds={[
+              [height - pub.bbox.y, pub.bbox.x],
+              [
+                height - pub.bbox.y - pub.bbox.height,
+                pub.bbox.x + pub.bbox.width,
+              ],
+            ]}
+            opacity={0}
+            fillOpacity={0}
+            onClick={() => onClick([height - pub.y, pub.x])}
           />
-        </div>
-        <Map
-          crs={CRS.Simple}
-          viewport={this.state.viewport}
-          onViewportChanged={this.onViewportChanged}
-          maxZoom={2}
-          minZoom={0}
-          maxBounds={[[0, 0], [height, width]]}
-          attributionControl={false}
-          zoomControl={false}
-        >
-          <ImageOverlay url={imageUrl} bounds={[[0, 0], [height, width]]} />
-          {metadata.map(pub => (
-            <Rectangle
+        ))}
+        {metadata
+          .filter(pub => !isNaN(pub.x))
+          .map(pub => (
+            <Circle
               key={pub.name}
-              bounds={[
-                [height - pub.bbox.y, pub.bbox.x],
-                [
-                  height - pub.bbox.y - pub.bbox.height,
-                  pub.bbox.x + pub.bbox.width,
-                ],
-              ]}
+              center={[height - pub.y, pub.x]}
+              radius={10}
               opacity={0}
               fillOpacity={0}
-              onClick={() => this.onClick([height - pub.y, pub.x])}
+              onClick={() => onClick([height - pub.y, pub.x])}
             />
           ))}
-          {metadata
-            .filter(pub => !isNaN(pub.x))
-            .map(pub => (
-              <Circle
-                key={pub.name}
-                center={[height - pub.y, pub.x]}
-                radius={10}
-                opacity={0}
-                fillOpacity={0}
-                onClick={() => this.onClick([height - pub.y, pub.x])}
-              />
-            ))}
-          <ZoomControl position="bottomright" />
-          <Control position="bottomleft">
-            <a href="cambridge-pub-map.pdf" className="button">
-              Download PDF
-            </a>
-          </Control>
-        </Map>
-      </React.Fragment>
-    );
-  }
-}
+        <ZoomControl position="bottomright" />
+        <Control position="bottomleft">
+          <a href="cambridge-pub-map.pdf" className="button">
+            Download PDF
+          </a>
+        </Control>
+      </Map>
+    </React.Fragment>
+  );
+};
 
 export default App;
