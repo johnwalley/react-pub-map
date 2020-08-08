@@ -13,7 +13,7 @@
     "react-select": "^3.1.0"
   },
   "scripts": {
-    "prepare": "./scripts/prepare.sh",
+    "build:prepare": "./scripts/prepare.sh",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -35,6 +35,6 @@
     "d3-selection": "^1.4.2",
     "d3-tube-map": "^1.2.2",
     "pdfkit": "^0.11.0",
-    "puppeteer": "^4.0.1"
+    "puppeteer": "^5.2.1"
   }
 }
