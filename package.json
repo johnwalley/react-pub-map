@@ -3,17 +3,17 @@
   "version": "1.2.0",
   "private": false,
   "dependencies": {
-    "leaflet": "^1.6.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-leaflet": "^2.6.1",
+    "leaflet": "^1.7.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-leaflet": "^2.8.0",
     "react-retina-image": "^2.0.5",
-    "react-leaflet-control": "^2.1.1",
-    "react-scripts": "3.3.0",
-    "react-select": "^3.0.8"
+    "react-leaflet-control": "^2.1.2",
+    "react-scripts": "3.4.1",
+    "react-select": "^3.1.0"
   },
   "scripts": {
-    "prepare": "./scripts/prepare.sh",
+    "build:prepare": "./scripts/prepare.sh",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -32,9 +32,9 @@
     ]
   },
   "devDependencies": {
-    "d3-selection": "^1.4.1",
-    "d3-tube-map": "^1.2.0",
+    "d3-selection": "^1.4.2",
+    "d3-tube-map": "^1.2.2",
     "pdfkit": "^0.11.0",
-    "puppeteer": "^2.0.0"
+    "puppeteer": "^5.2.1"
   }
 }
