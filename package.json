@@ -4,7 +4,7 @@
   "private": false,
   "dependencies": {
     "leaflet": "^1.7.1",
-    "react": "^16.13.1",
+    "react": "^16.14.0",
     "react-dom": "^16.13.1",
     "react-leaflet": "^2.8.0",
     "react-retina-image": "^2.0.5",
