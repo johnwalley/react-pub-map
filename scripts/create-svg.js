@@ -7,7 +7,7 @@ var d3 = Object.assign({}, require("d3-selection"), require("d3-tube-map"));
 
 var dom = new jsdom.JSDOM("<!DOCTYPE html><div></div>");
 
-global.SVGElement = function() {};
+global.SVGElement = function () {};
 
 var data = JSON.parse(
   fs.readFileSync(path.join(__dirname, "./pubs.json"), "utf8")
@@ -20,19 +20,13 @@ var margin = {
   top: argv.top !== undefined ? argv.top : 40,
   right: argv.right !== undefined ? argv.right : 20,
   bottom: argv.bottom !== undefined ? argv.bottom : 100,
-  left: argv.left !== undefined ? argv.left : 100
+  left: argv.left !== undefined ? argv.left : 100,
 };
 
 d3.select(dom.window.document.body)
   .select("div")
   .datum(data)
-  .call(
-    d3
-      .tubeMap()
-      .width(width)
-      .height(height)
-      .margin(margin)
-  );
+  .call(d3.tubeMap().width(width).height(height).margin(margin));
 
 var pretext = `<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="${width}px" height="${height}px" viewBox="0 0 ${width} ${height}" enable-background="new 0 0 ${width} ${height}" xml:space="preserve"><defs><style type="text/css"><![CDATA[ 
 @font-face {
@@ -52,9 +46,13 @@ font-weight: 400;
 var svg = dom.window.document.querySelector("svg").innerHTML;
 var posttext = `</svg>`;
 
-fs.writeFile("./scripts/cambridge-pub-map.svg", pretext + svg + posttext, function() {
-  console.log("Successfully wrote file to ./cambridge-pub-map.svg");
-});
+fs.writeFile(
+  "./scripts/cambridge-pub-map.svg",
+  pretext + svg + posttext,
+  function () {
+    console.log("Successfully wrote file to ./cambridge-pub-map.svg");
+  }
+);
 
 function file(file) {
   return fs

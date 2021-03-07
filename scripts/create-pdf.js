@@ -18,7 +18,7 @@ const riversidePubs = [
   "FortStGeorge",
   "Granta",
   "GreenDragon",
-  "Mill"
+  "Mill",
 ];
 
 const quizes = ["CarpentersArms", "Dobblers", "Petersfield"];
@@ -37,7 +37,7 @@ const questionIcon =
 
 const dom = new jsdom.JSDOM("<!DOCTYPE html><div></div>");
 
-global.SVGElement = function() {};
+global.SVGElement = function () {};
 
 const data = JSON.parse(
   fs.readFileSync(path.join(__dirname, "./pubs.json"), "utf8")
@@ -63,7 +63,7 @@ d3.select(dom.window.document.body)
         top: 100,
         right: 80,
         bottom: 0,
-        left: 80
+        left: 80,
       })
   );
 
@@ -73,7 +73,7 @@ const doc = new PDFDocument({
   size: [height, width],
   layout: "landscape",
   margin: 0,
-  info: { Title: `Cambridge Pub Map - ${date}`, Author: "John Walley" }
+  info: { Title: `Cambridge Pub Map - ${date}`, Author: "John Walley" },
 });
 
 doc.pipe(fs.createWriteStream("./scripts/cambridge-pub-map.pdf"));
@@ -90,7 +90,7 @@ doc
   .text("Cambridge pub map", 20, 10, {
     fill: true,
     stroke: true,
-    link: "https://www.pubmap.co.uk"
+    link: "https://www.pubmap.co.uk",
   });
 
 doc
@@ -107,7 +107,7 @@ doc
       stroke: true,
       width: doc.widthOfString("www.pubmap.co.uk"),
       align: "center",
-      link: "https://www.pubmap.co.uk"
+      link: "https://www.pubmap.co.uk",
     }
   );
 
@@ -146,12 +146,12 @@ const labels = dom.window.document.querySelectorAll("tspan");
 const alignMap = {
   start: "left",
   middle: "center",
-  end: "right"
+  end: "right",
 };
 
-labels.forEach(label => {
+labels.forEach((label) => {
   const el = metadata.find(
-    d => d.name === label.parentElement.parentElement.id
+    (d) => d.name === label.parentElement.parentElement.id
   );
 
   const bbox = el.bbox;
@@ -167,7 +167,7 @@ labels.forEach(label => {
       width: bbox.width,
       align: align,
       link: data.stations[label.parentElement.parentElement.id].website,
-      strike
+      strike,
     }
   );
 });
@@ -176,7 +176,7 @@ const rivers = dom.window.document
   .querySelector(".river")
   .querySelectorAll("path");
 
-rivers.forEach(river => {
+rivers.forEach((river) => {
   doc
     .path(river.getAttribute("d"))
     .lineWidth(river.getAttribute("stroke-width"))
@@ -185,7 +185,7 @@ rivers.forEach(river => {
 
 const lines = dom.window.document.querySelectorAll(".line");
 
-lines.forEach(line => {
+lines.forEach((line) => {
   doc
     .path(line.getAttribute("d"))
     .lineWidth(line.getAttribute("stroke-width"))
@@ -194,7 +194,7 @@ lines.forEach(line => {
 
 const stations = dom.window.document.querySelectorAll(".station");
 
-stations.forEach(station => {
+stations.forEach((station) => {
   doc
     .path(station.getAttribute("d"))
     .lineWidth(station.getAttribute("stroke-width"))
@@ -205,7 +205,7 @@ const interchanges = dom.window.document.querySelectorAll(".interchange");
 
 const regex = /translate\((\d+.\d+),(\d+.\d+)\)/;
 
-interchanges.forEach(interchange => {
+interchanges.forEach((interchange) => {
   doc
     .translate(
       +regex.exec(interchange.getAttribute("transform"))[1],
@@ -255,12 +255,12 @@ Object.values(data.stations)
         `${
           "ABCDEFGH"[
             Math.floor(
-              (metadata.find(x => x.name === line.name).y - 60) /
+              (metadata.find((x) => x.name === line.name).y - 60) /
                 (MAP_HEIGHT / (NUM_SQUARES_Y + 1))
             )
           ]
         }${Math.ceil(
-          (metadata.find(x => x.name === line.name).x - 20) /
+          (metadata.find((x) => x.name === line.name).x - 20) /
             (MAP_WIDTH / (NUM_SQUARES_X + 1))
         )}`,
         keyLeft + (i > numPubsInFirstColumn ? 70 : 0),
@@ -346,7 +346,7 @@ d3.range(NUM_SQUARES_X + 1).forEach((num, i) => {
     60 - 4,
     {
       fill: false,
-      stroke: true
+      stroke: true,
     }
   );
 
@@ -356,7 +356,7 @@ d3.range(NUM_SQUARES_X + 1).forEach((num, i) => {
     60 - 4,
     {
       fill: true,
-      stroke: false
+      stroke: false,
     }
   );
 });
@@ -368,7 +368,7 @@ d3.range(NUM_SQUARES_Y + 1).forEach((num, i) => {
     60 - 4 + ((i + 0.5) * MAP_HEIGHT) / (NUM_SQUARES_Y + 1),
     {
       fill: false,
-      stroke: true
+      stroke: true,
     }
   );
 
@@ -378,7 +378,7 @@ d3.range(NUM_SQUARES_Y + 1).forEach((num, i) => {
     60 - 4 + ((i + 0.5) * MAP_HEIGHT) / (NUM_SQUARES_Y + 1),
     {
       fill: true,
-      stroke: false
+      stroke: false,
     }
   );
 });

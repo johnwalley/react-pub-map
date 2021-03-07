@@ -1,5 +1,5 @@
-import 'leaflet/dist/leaflet.css';
-import './App.css';
+import "leaflet/dist/leaflet.css";
+import "./App.css";
 
 import {
   Circle,
@@ -7,14 +7,14 @@ import {
   Map,
   Rectangle,
   ZoomControl,
-} from 'react-leaflet';
-import React, { useRef, useState } from 'react';
+} from "react-leaflet";
+import React, { useRef, useState } from "react";
 
-import { CRS } from 'leaflet';
-import Control from 'react-leaflet-control';
-import Select from 'react-select';
-import imageUrl from './cambridge-pub-map.svg';
-import metadata from './cambridge-pub-map.json';
+import { CRS } from "leaflet";
+import Control from "react-leaflet-control";
+import Select from "react-select";
+import imageUrl from "./cambridge-pub-map.svg";
+import metadata from "./cambridge-pub-map.json";
 
 const width = 715.6065;
 const height = 595.28;
@@ -25,7 +25,7 @@ const DEFAULT_VIEWPORT = {
 
 const App = () => {
   const [viewport, setViewport] = useState(DEFAULT_VIEWPORT);
-  const [selectValue, setSelectValue] = useState('');
+  const [selectValue, setSelectValue] = useState("");
   const select = useRef(null);
 
   const onPubSelected = (name) => {
@@ -55,7 +55,7 @@ const App = () => {
     <React.Fragment>
       <div
         style={{
-          position: 'absolute',
+          position: "absolute",
           top: 0,
           left: 0,
           marginTop: 10,
