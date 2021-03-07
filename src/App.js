@@ -1,19 +1,21 @@
-import React, { useRef, useState } from 'react';
-import { CRS } from 'leaflet';
-import {
-  Map,
-  ImageOverlay,
-  Rectangle,
-  Circle,
-  ZoomControl,
-} from 'react-leaflet';
-import Select from 'react-select';
-import Control from 'react-leaflet-control';
 import 'leaflet/dist/leaflet.css';
 import './App.css';
 
-const imageUrl = require('./cambridge-pub-map.svg');
-const metadata = require('./cambridge-pub-map.json');
+import {
+  Circle,
+  ImageOverlay,
+  Map,
+  Rectangle,
+  ZoomControl,
+} from 'react-leaflet';
+import React, { useRef, useState } from 'react';
+
+import { CRS } from 'leaflet';
+import Control from 'react-leaflet-control';
+import Select from 'react-select';
+import imageUrl from './cambridge-pub-map.svg';
+import metadata from './cambridge-pub-map.json';
+
 const width = 715.6065;
 const height = 595.28;
 const DEFAULT_VIEWPORT = {
@@ -26,22 +28,22 @@ const App = () => {
   const [selectValue, setSelectValue] = useState('');
   const select = useRef(null);
 
-  const onPubSelected = name => {
-    const pub = metadata.find(pub => pub.name === name);
+  const onPubSelected = (name) => {
+    const pub = metadata.find((pub) => pub.name === name);
     const point = [height - pub.y, pub.x];
 
     setViewport({ center: point });
   };
 
-  const onClick = point => {
+  const onClick = (point) => {
     setViewport({ center: point });
   };
 
-  const onViewportChanged = viewport => {
+  const onViewportChanged = (viewport) => {
     setViewport(viewport);
   };
 
-  const updateValue = newValue => {
+  const updateValue = (newValue) => {
     setSelectValue(newValue.name);
 
     if (newValue !== null) {
@@ -100,7 +102,7 @@ const App = () => {
             [height, width],
           ]}
         />
-        {metadata.map(pub => (
+        {metadata.map((pub) => (
           <Rectangle
             key={pub.name}
             bounds={[
@@ -116,8 +118,8 @@ const App = () => {
           />
         ))}
         {metadata
-          .filter(pub => !isNaN(pub.x))
-          .map(pub => (
+          .filter((pub) => !isNaN(pub.x))
+          .map((pub) => (
             <Circle
               key={pub.name}
               center={[height - pub.y, pub.x]}
