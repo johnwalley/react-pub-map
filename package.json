@@ -1,7 +1,7 @@
 {
   "name": "react-pub-map",
   "version": "1.2.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "leaflet": "1.7.1",
     "react": "17.0.1",
