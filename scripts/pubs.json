@@ -894,8 +894,7 @@
           "coords": [36, -4]
         },
         {
-          "coords": [37, -3],
-          "dir": "E"
+          "coords": [37, -3]
         },
         {
           "coords": [37, 2],
@@ -913,8 +912,7 @@
           "coords": [37, 9]
         },
         {
-          "coords": [36, 10],
-          "dir": "N"
+          "coords": [36, 10]
         },
         {
           "coords": [34, 10],
@@ -950,8 +948,7 @@
           "coords": [10, 10]
         },
         {
-          "coords": [9, 9],
-          "dir": "W"
+          "coords": [9, 9]
         },
         {
           "coords": [9, 2],
@@ -969,8 +966,7 @@
           "coords": [9, -3]
         },
         {
-          "coords": [10, -4],
-          "dir": "S"
+          "coords": [10, -4]
         },
         {
           "coords": [14, -4]
@@ -1343,17 +1339,17 @@
           "coords": [70, 14]
         },
         {
-          "coords": [82, 27],
+          "coords": [83, 27],
           "name": "AncientShepherds",
           "labelPos": "SE"
         },
         {
-          "coords": [84, 29],
+          "coords": [85, 29],
           "name": "KingsHead",
           "labelPos": "SE"
         },
         {
-          "coords": [86, 31],
+          "coords": [87, 31],
           "name": "Plough",
           "labelPos": "SE"
         }
@@ -1592,8 +1588,7 @@
           "coords": [42, 30]
         },
         {
-          "coords": [43, 31],
-          "dir": "E"
+          "coords": [43, 31]
         },
         {
           "coords": [43, 33]
@@ -1612,7 +1607,7 @@
     "shiftCoords": [0, 0],
     "nodes": [
       {
-        "coords": [-42, -56]
+        "coords": [-43, -56]
       },
       {
         "coords": [5, -8]
