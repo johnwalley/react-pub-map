@@ -35,7 +35,7 @@
   "devDependencies": {
     "d3-selection": "^1.4.2",
     "d3-tube-map": "^1.5.0",
-    "pdfkit": "^0.12.1",
+    "pdfkit": "^0.13.0",
     "puppeteer": "^10.1.0"
   }
 }
