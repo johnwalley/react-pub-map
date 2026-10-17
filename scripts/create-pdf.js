@@ -7,7 +7,8 @@ const d3 = Object.assign({}, require("d3"), require("d3-tube-map"));
 
 const FONT_SIZE_TITLE = 18;
 const FONT_SIZE_COPYRIGHT = 6;
-const FONT_SIZE_PUB = 7;
+// Pub labels scale with the map, relative to the SVG label size
+const FONT_SIZE_PUB_RATIO = 0.94;
 const FONT_SIZE_LEGEND_TITLE = 10;
 const FONT_SIZE_LEGEND_CONTENT = 5;
 const FONT_SIZE_LEGEND_LINES = 8;
@@ -138,10 +139,11 @@ d3.range(NUM_SQUARES_Y).forEach((num, i) => {
 doc.save();
 doc.rect(20, 60, MAP_WIDTH, MAP_HEIGHT).clip();
 
-doc.fontSize(FONT_SIZE_PUB);
-doc.fillColor("#10137E");
-
 const labels = dom.window.document.querySelectorAll("tspan");
+const svgFontSize = parseFloat(labels[0].parentElement.style.fontSize);
+
+doc.fontSize(FONT_SIZE_PUB_RATIO * svgFontSize);
+doc.fillColor("#10137E");
 
 const alignMap = {
   start: "left",
@@ -160,9 +162,10 @@ labels.forEach((label) => {
   const align = alignMap[label.parentElement.getAttribute("text-anchor")];
 
   doc.text(
-    label.innerHTML,
+    label.textContent,
     bbox.x,
-    bbox.y + 8.2 * parseFloat(label.getAttribute("dy").slice(0, -2)),
+    bbox.y +
+      1.1 * svgFontSize * parseFloat(label.getAttribute("dy").slice(0, -2)),
     {
       width: bbox.width,
       align: align,

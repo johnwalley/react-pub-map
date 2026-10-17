@@ -863,6 +863,86 @@
         "lat": 52.210964,
         "lon": 0.146358
       }
+    },
+    "Tivoli": {
+      "name": "Tivoli",
+      "label": "Tivoli",
+      "address": "16 Chesterton Rd, Cambridge CB4 3AX",
+      "website": "https://www.thetivoli.co.uk/",
+      "position": {
+        "lat": 52.213654,
+        "lon": 0.123844
+      }
+    },
+    "CambridgeTap": {
+      "name": "Cambridge Tap",
+      "label": "Cambridge\nTap",
+      "address": "32 St Andrew's St, Cambridge CB2 3AR",
+      "website": "https://www.mcmullens.co.uk/cambridge-tap",
+      "position": {
+        "lat": 52.203429,
+        "lon": 0.123395
+      }
+    },
+    "TownAndGown": {
+      "name": "Town & Gown",
+      "label": "Town\n& Gown",
+      "address": "8 Market Passage, Cambridge CB2 3PF",
+      "website": "http://www.townandgown.co.uk",
+      "position": {
+        "lat": 52.206402,
+        "lon": 0.1199
+      }
+    },
+    "ByronsBear": {
+      "name": "Byron's Bear",
+      "label": "Byron's Bear",
+      "address": "3 Thompson's Ln, Cambridge CB5 8AQ",
+      "website": "https://byronsbear.co.uk/",
+      "position": {
+        "lat": 52.211469,
+        "lon": 0.118534
+      }
+    },
+    "OldBicycleShop": {
+      "name": "Old Bicycle Shop",
+      "label": "Old Bicycle Shop",
+      "address": "104 Regent St, Cambridge CB2 1DP",
+      "website": "http://www.oldbicycleshop.com/",
+      "position": {
+        "lat": 52.199637,
+        "lon": 0.126886
+      }
+    },
+    "Emperor": {
+      "name": "Emperor",
+      "label": "Emperor",
+      "address": "21 Hills Rd, Cambridge CB2 1NW",
+      "website": "http://www.emperorbarcambridge.co.uk/",
+      "position": {
+        "lat": 52.197142,
+        "lon": 0.12949
+      }
+    },
+    "StationTavern": {
+      "name": "Station Tavern",
+      "label": "Station Tavern",
+      "address": "2 Station Square, Cambridge CB1 2GA",
+      "website": "http://www.thestationtavern.co.uk",
+      "position": {
+        "lat": 52.194907,
+        "lon": 0.137646
+      }
+    },
+    "SevenStars": {
+      "name": "Seven Stars",
+      "label": "Seven\nStars",
+      "address": "249 Newmarket Rd, Cambridge CB5 8JE",
+      "website": "https://www.thesevenstars.pub/",
+      "position": {
+        "lat": 52.209731,
+        "lon": 0.143954
+      }
     }
   },
   "lines": [
@@ -886,36 +966,36 @@
           "hide": true
         },
         {
-          "coords": [36, -4]
+          "coords": [44.0, -4]
         },
         {
-          "coords": [37, -3]
+          "coords": [45.0, -3]
         },
         {
-          "coords": [37, 2],
+          "coords": [45.0, 2],
           "marker": "interchange",
           "name": "ClarendonArms",
           "labelPos": "E",
           "hide": true
         },
         {
-          "coords": [37, 6],
+          "coords": [45.0, 6],
           "name": "StRadegund",
           "labelPos": "E"
         },
         {
-          "coords": [37, 9]
+          "coords": [45.0, 9]
         },
         {
-          "coords": [36, 10]
+          "coords": [44.0, 10]
         },
         {
-          "coords": [34, 10],
+          "coords": [42.0, 10],
           "name": "KingStreetRun",
           "labelPos": "N"
         },
         {
-          "coords": [32, 10],
+          "coords": [40.0, 10],
           "name": "ChampionOfTheThames",
           "labelPos": "S"
         },
@@ -1096,12 +1176,17 @@
           "labelPos": "S"
         },
         {
-          "coords": [14, 23],
+          "coords": [13, 23],
+          "name": "Tivoli",
+          "labelPos": "N"
+        },
+        {
+          "coords": [21, 23],
           "name": "PortlandArms",
           "labelPos": "N"
         },
         {
-          "coords": [20, 23],
+          "coords": [22, 23],
           "name": "Waterman",
           "labelPos": "S"
         },
@@ -1113,12 +1198,12 @@
           "hide": true
         },
         {
-          "coords": [38, 23],
+          "coords": [46.0, 23],
           "name": "Haymakers",
           "labelPos": "N"
         },
         {
-          "coords": [44, 23],
+          "coords": [52.0, 23],
           "name": "GreenDragon",
           "labelPos": "S"
         }
@@ -1148,77 +1233,77 @@
           "labelPos": "N"
         },
         {
-          "coords": [37, 2],
+          "coords": [45.0, 2],
           "marker": "interchange",
           "name": "ClarendonArms",
           "labelPos": "SW",
           "canonical": true
         },
         {
-          "coords": [45, 2],
+          "coords": [53.0, 2],
           "marker": "interchange",
           "name": "ElmTree",
           "labelPos": "NW",
           "canonical": true
         },
         {
-          "coords": [50, 2],
+          "coords": [58.0, 2],
           "name": "Cricketers",
           "labelPos": "S"
         },
         {
-          "coords": [54, 2],
+          "coords": [62.0, 2],
           "name": "FreePress",
           "labelPos": "N"
         },
         {
-          "coords": [58, 2],
+          "coords": [66.0, 2],
           "name": "TramDepot",
           "labelPos": "S"
         },
         {
-          "coords": [62, 2],
+          "coords": [70.0, 2],
           "name": "DukeOfCambridge",
           "labelPos": "N"
         },
         {
-          "coords": [67, 2],
+          "coords": [75.0, 2],
           "name": "BlueMoon",
           "labelPos": "S"
         },
         {
-          "coords": [71, 2],
+          "coords": [79.0, 2],
           "name": "Dobblers",
           "labelPos": "N"
         },
         {
-          "coords": [75, 2],
+          "coords": [83.0, 2],
           "name": "Alex",
           "labelPos": "S"
         },
         {
-          "coords": [78, 2]
+          "coords": [86.0, 2]
         },
         {
-          "coords": [80, 1]
+          "coords": [88.0, 1]
         },
         {
-          "coords": [82, -1],
+          "coords": [90.0, -1],
           "name": "Geldart",
           "labelPos": "NE"
         },
         {
-          "coords": [84, -3],
+          "coords": [92.0, -3],
           "name": "CambridgeBlue",
           "labelPos": "NE"
         },
         {
-          "coords": [86, -5],
+          "coords": [94.0, -5],
           "name": "Petersfield",
           "labelPos": "NE"
         },
         {
-          "coords": [88, -7],
+          "coords": [96.0, -7],
           "name": "KingstonArms",
           "labelPos": "NE"
         }
@@ -1292,58 +1377,57 @@
           "hide": true
         },
         {
-          "coords": [36.5, -4]
+          "coords": [44.5, -4]
         },
         {
-          "coords": [38.5, -3]
+          "coords": [46.5, -3]
         },
         {
-          "coords": [49.5, 8],
+          "coords": [57.5, 8],
           "name": "Hopbine",
           "labelPos": "NW"
         },
         {
-          "coords": [51.5, 10],
+          "coords": [59.5, 10],
           "name": "BurleighArms",
           "labelPos": "NW"
         },
         {
-          "coords": [53.5, 12]
+          "coords": [61.5, 12]
         },
         {
-          "coords": [55.5, 13]
+          "coords": [63.5, 13]
         },
         {
-          "coords": [59, 13],
+          "coords": [67.0, 13],
           "name": "CornerHouse",
           "labelPos": "S"
         },
         {
-          "coords": [61, 13],
-          "name": "Wrestlers",
+          "coords": [69.0, 13],
+          "name": "SevenStars",
           "labelPos": "N"
         },
         {
-          "coords": [66, 13]
+          "coords": [77.0, 13],
+          "name": "Wrestlers",
+          "labelPos": "S"
         },
         {
-          "coords": [68, 13]
+          "coords": [79.0, 14]
         },
         {
-          "coords": [70, 14]
-        },
-        {
-          "coords": [83, 27],
+          "coords": [92.0, 27],
           "name": "AncientShepherds",
           "labelPos": "SE"
         },
         {
-          "coords": [85, 29],
+          "coords": [94.0, 29],
           "name": "KingsHead",
           "labelPos": "SE"
         },
         {
-          "coords": [87, 31],
+          "coords": [96.0, 31],
           "name": "Plough",
           "labelPos": "SE"
         }
@@ -1356,56 +1440,56 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [45, 2]
+          "coords": [53.0, 2]
         },
         {
-          "coords": [45, -2]
+          "coords": [53.0, -2]
         },
         {
-          "coords": [46, -4]
+          "coords": [54.0, -4]
         },
         {
-          "coords": [50, -8],
+          "coords": [58.0, -8],
           "name": "SixBells",
           "labelPos": "NE"
         },
         {
-          "coords": [52, -10],
+          "coords": [60.0, -10],
           "name": "LiveAndLetLive",
           "labelPos": "NE"
         },
         {
-          "coords": [54, -12],
+          "coords": [62.0, -12],
           "name": "SalisburyArms",
           "labelPos": "NE"
         },
         {
-          "coords": [56, -14],
+          "coords": [64.0, -14],
           "name": "WhiteSwan",
           "labelPos": "NE"
         },
         {
-          "coords": [58, -16],
+          "coords": [66.0, -16],
           "name": "DevonshireArms",
           "labelPos": "SW"
         },
         {
-          "coords": [60, -18],
+          "coords": [68.0, -18],
           "name": "EarlOfBeaconsfield",
           "labelPos": "NE"
         },
         {
-          "coords": [62, -20],
+          "coords": [70.0, -20],
           "name": "Empress",
           "labelPos": "NE"
         },
         {
-          "coords": [64, -22],
+          "coords": [72.0, -22],
           "name": "RoyalStandard",
           "labelPos": "SW"
         },
         {
-          "coords": [66, -24],
+          "coords": [74.0, -24],
           "name": "Brook",
           "labelPos": "SW"
         }
@@ -1433,54 +1517,69 @@
           "hide": true
         },
         {
-          "coords": [31, -4]
+          "coords": [39.0, -4]
         },
         {
-          "coords": [33, -5]
+          "coords": [41.0, -5]
         },
         {
-          "coords": [35, -7],
+          "coords": [43.0, -7],
           "name": "GrainStore",
           "labelPos": "NE"
         },
         {
-          "coords": [37, -9],
+          "coords": [45.0, -9],
           "name": "PrinceRegent",
           "labelPos": "NE"
         },
         {
-          "coords": [41, -13],
+          "coords": [47.0, -11],
+          "name": "OldBicycleShop",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [49.0, -13],
+          "name": "Emperor",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [51.0, -15],
           "name": "FlyingPig",
           "labelPos": "NE"
         },
         {
-          "coords": [43, -15],
+          "coords": [53.0, -17],
           "name": "OldTicketOffice",
           "labelPos": "SW"
         },
         {
-          "coords": [45, -17],
+          "coords": [55.0, -19],
+          "name": "StationTavern",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [57.0, -21],
           "name": "EarlOfDerby",
           "labelPos": "SW"
         },
         {
-          "coords": [47, -19],
+          "coords": [59.0, -23],
           "name": "Rock",
           "labelPos": "SW"
         },
         {
-          "coords": [51, -23],
+          "coords": [63.0, -27],
           "name": "Med",
           "labelPos": "SW"
         },
         {
-          "coords": [53, -25]
+          "coords": [65.0, -29]
         },
         {
-          "coords": [55, -26]
+          "coords": [67.0, -30]
         },
         {
-          "coords": [58, -26],
+          "coords": [70.0, -30],
           "name": "QueenEdith",
           "labelPos": "S"
         }
@@ -1533,6 +1632,16 @@
           "canonical": true
         },
         {
+          "coords": [27, -1],
+          "name": "CambridgeTap",
+          "labelPos": "E"
+        },
+        {
+          "coords": [27, 6],
+          "name": "TownAndGown",
+          "labelPos": "E"
+        },
+        {
           "coords": [27, 10],
           "marker": "interchange",
           "name": "BrewHouse",
@@ -1542,6 +1651,11 @@
         {
           "coords": [27, 13],
           "name": "Maypole",
+          "labelPos": "W"
+        },
+        {
+          "coords": [27, 15],
+          "name": "ByronsBear",
           "labelPos": "W"
         },
         {
@@ -1569,26 +1683,26 @@
           "coords": [32, 30]
         },
         {
-          "coords": [34, 30],
+          "coords": [42.0, 30],
           "name": "MiltonArms",
           "labelPos": "N"
         },
         {
-          "coords": [40, 30],
+          "coords": [48.0, 30],
           "name": "GoldenHind",
           "labelPos": "S"
         },
         {
-          "coords": [42, 30]
+          "coords": [50.0, 30]
         },
         {
-          "coords": [43, 31]
+          "coords": [51.0, 31]
         },
         {
-          "coords": [43, 33]
+          "coords": [51.0, 33]
         },
         {
-          "coords": [43, 42],
+          "coords": [51.0, 42],
           "name": "Ship",
           "labelPos": "E"
         }
@@ -1622,13 +1736,13 @@
         "coords": [12, 18]
       },
       {
-        "coords": [50, 18]
+        "coords": [58.0, 18]
       },
       {
-        "coords": [52, 19]
+        "coords": [60.0, 19]
       },
       {
-        "coords": [86, 53]
+        "coords": [94.0, 53]
       }
     ]
   }
