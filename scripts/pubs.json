@@ -41,12 +41,12 @@
       "label": "Ancient Shepherds",
       "place_id": "ChIJI5agpzlw2EcR55ZT5vZy_ok",
       "address": "5 High St, Fen Ditton, Cambridge, CB5 8ST",
-      "website": "http://www.theancientshepherds.co.uk/",
       "phone": "01223 293280",
       "position": {
         "lat": 52.220375,
         "lon": 0.172721
-      }
+      },
+      "closed": true
     },
     "Architect": {
       "name": "Architect",
@@ -65,7 +65,7 @@
       "label": "Baron\nof Beef",
       "place_id": "ChIJVeAxW75w2EcRkM91IuEN_oU",
       "address": "19 Bridge St, Cambridge CB2 1UF",
-      "website": "http://www.baronofbeef-cambridge.co.uk/",
+      "website": "https://www.greeneking.co.uk/pubs/cambridgeshire/baron-of-beef",
       "phone": "01223 505022",
       "position": {
         "lat": 52.208893,
@@ -76,7 +76,7 @@
       "name": "Bath House",
       "label": "Bath House",
       "address": "3 Benet Street, Cambridge, CB2 3QN",
-      "website": "http://www.bathhouse-cambridge.co.uk/",
+      "website": "https://www.greeneking.co.uk/pubs/cambridgeshire/bath-house",
       "phone": "01223 350969",
       "position": {
         "lat": 52.204073,
@@ -87,7 +87,6 @@
       "name": "Blue Ball Inn",
       "label": "Blue Ball Inn",
       "address": "57 Broadway, Grantchester, Cambridge CB3 9NQ",
-      "website": "http://www.blueballgrantchester.co.uk/",
       "phone": "01223 846004",
       "position": {
         "lat": 52.183303,
@@ -98,7 +97,7 @@
       "name": "Blue Moon",
       "label": "Blue\nMoon",
       "address": "2 Norfolk St, Cambridge CB1 2LF",
-      "website": "https://www.facebook.com/bluemooncambridge/",
+      "website": "http://cambridge.pub/blue-moon",
       "phone": "01223 500238",
       "position": {
         "lat": 52.204781,
@@ -109,7 +108,7 @@
       "name": "Boathouse",
       "label": "Boathouse",
       "address": "14 Chesterton Rd, Cambridge CB4 3AX",
-      "website": "http://www.boathouse-cambridge.co.uk/",
+      "website": "https://www.greeneking.co.uk/pubs/cambridgeshire/boathouse",
       "phone": "01223 460905",
       "position": {
         "lat": 52.213719,
@@ -117,10 +116,10 @@
       }
     },
     "BrewHouse": {
-      "name": "Brew House",
-      "label": "Brew\nHouse",
+      "name": "King Street Brewhouse",
+      "label": "King Street\nBrewhouse",
       "address": "1 King St, Cambridge CB1 1LH",
-      "website": "http://www.thecambridgebrewhouse.com/",
+      "website": "https://www.kingstbrewhousecambridge.co.uk/",
       "phone": "01223 855185",
       "position": {
         "lat": 52.207412,
@@ -131,7 +130,7 @@
       "name": "Brook",
       "label": "Brook",
       "address": "25 Brookfields, Cambridge CB1 3NW",
-      "website": "http://www.thebrookpub.co.uk/",
+      "website": "https://www.brookcambridge.com/",
       "phone": "01223 566929",
       "position": {
         "lat": 52.196072,
@@ -153,7 +152,7 @@
       "name": "Cambridge Blue",
       "label": "Cambridge Blue",
       "address": "85-87 Gwydir St, Cambridge CB1 2LG",
-      "website": "http://www.the-cambridgeblue.co.uk/",
+      "website": "http://cambridge.pub/the-blue/",
       "phone": "01223 471680",
       "position": {
         "lat": 52.202328,
@@ -164,7 +163,6 @@
       "name": "Carlton Arms",
       "label": "Carlton Arms",
       "address": "Carlton Way, Cambridge CB4 2DF",
-      "website": "http://thecarltonarmscambridge.co.uk/",
       "phone": "01223 367422",
       "position": {
         "lat": 52.222048,
@@ -175,7 +173,7 @@
       "name": "Carpenter's Arms",
       "label": "Carpenter's Arms",
       "address": "184-186 Victoria Rd, Cambridge, CB4 3DZ",
-      "website": "http://www.carpentersarmscambridge.co.uk/",
+      "website": "http://www.carpentersarmscambridge.com",
       "phone": "01223 367050",
       "position": {
         "lat": 52.21576,
@@ -187,7 +185,7 @@
       "label": "Castle\nInn",
       "place_id": "ChIJoccoXsdw2EcROG63agLdFi4",
       "address": "38 Castle St, City Centre, Cambridge CB3 0AJ",
-      "website": "http://thecastleinncambridge.com/",
+      "website": "http://thecastleinn.pub/",
       "phone": "01223 353194",
       "position": {
         "lat": 52.211945,
@@ -209,18 +207,18 @@
       "label": "Clarendon\nArms",
       "address": "35-36 Clarendon St, Cambridge CB1 1JX",
       "phone": "01223 778272",
-      "website": "https://theclarendonarms.com/",
       "position": {
         "lat": 52.20465,
         "lon": 0.127679
-      }
+      },
+      "closed": true
     },
     "CornerHouse": {
       "name": "Corner House",
       "label": "Corner House",
       "address": "231 Newmarket Rd, Cambridge CB5 8JE",
       "phone": "01223 352047",
-      "website": "https://www.cornerhousepubcambridge.com/",
+      "website": "https://thecornerhousepub.co/",
       "position": {
         "lat": 52.209485,
         "lon": 0.143369
@@ -230,7 +228,7 @@
       "name": "Cricketers",
       "label": "Cricketers",
       "address": "18 Melbourne Pl, Cambridge CB1 1EQ",
-      "website": "http://lukthai.com/",
+      "website": "https://www.cricketerslukthai.co.uk/",
       "phone": "01223 778871",
       "position": {
         "lat": 52.204954,
@@ -263,18 +261,18 @@
       "name": "Duke of Cambridge",
       "label": "Duke\nof Cambridge",
       "address": "176 East Rd, Cambridge CB1 1BG",
-      "website": "http://www.dukeofcambridge-cambridge.co.uk/",
       "phone": "01223 304121",
       "position": {
         "lat": 52.204871,
         "lon": 0.133633
-      }
+      },
+      "closed": true
     },
     "Eagle": {
       "name": "Eagle",
       "label": "Eagle",
       "address": "8 Benet Street, Cambridge, CB2 3QN",
-      "website": "http://www.eagle-cambridge.co.uk/",
+      "website": "https://www.greeneking.co.uk/pubs/cambridgeshire/eagle",
       "phone": "01223 505020",
       "position": {
         "lat": 52.203974,
@@ -285,7 +283,6 @@
       "name": "Earl of Beaconsfield",
       "label": "Earl of Beaconsfield",
       "address": "133 Mill Rd, Cambridge CB1 3AA",
-      "website": "http://www.earlofbeaconsfield.co.uk/",
       "phone": "01223 410703",
       "position": {
         "lat": 52.198414,
@@ -307,7 +304,7 @@
       "name": "Elm Tree",
       "label": "Elm Tree",
       "address": "16A Orchard St, Cambridge CB1 1JT",
-      "website": "http://www.theelmtreecambridge.co.uk/",
+      "website": "https://www.elmtreecambridge.co.uk/",
       "phone": "01223 502632",
       "position": {
         "lat": 52.205124,
@@ -332,13 +329,14 @@
       "position": {
         "lat": 52.194474,
         "lon": 0.131747
-      }
+      },
+      "closed": true
     },
     "FortStGeorge": {
       "name": "Fort St George",
       "label": "Fort St George",
       "address": "Cambridge CB4 1HA",
-      "website": "http://www.fortstgeorge-cambridge.co.uk/",
+      "website": "https://www.greeneking.co.uk/pubs/cambridgeshire/fort-st-george",
       "phone": "01223 305523",
       "position": {
         "lat": 52.212511,
@@ -349,7 +347,7 @@
       "name": "Free Press",
       "label": "Free\nPress",
       "address": "7 Prospect Row, Cambridge, CB1 1DU",
-      "website": "http://www.freepresspub.com/",
+      "website": "https://www.freepresscambridge.com",
       "phone": "01223 368337",
       "position": {
         "lat": 52.20474,
@@ -371,7 +369,7 @@
       "name": "Golden Hind",
       "label": "Golden Hind",
       "address": "355 Milton Rd, Cambridge, CB4 1SP",
-      "website": "http://www.golden-hind-pub-cambridge.co.uk/",
+      "website": "https://www.greeneking.co.uk/pubs/cambridgeshire/golden-hind",
       "phone": "01223 420816",
       "position": {
         "lat": 52.227922,
@@ -382,7 +380,7 @@
       "name": "Grain Store",
       "label": "Grain Store",
       "address": "69-76 Regent St, Cambridge CB2 1AA",
-      "website": "http://www.grainandhopstore-cambridge.co.uk/",
+      "website": "https://www.greeneking.co.uk/pubs/cambridgeshire/grain-and-hop-store",
       "phone": "01223 323405",
       "position": {
         "lat": 52.200689,
@@ -393,7 +391,7 @@
       "name": "Granta",
       "label": "Granta",
       "address": "14 Newnham Rd, Cambridge, CB3 9EX",
-      "website": "http://www.granta-cambridge.co.uk/",
+      "website": "https://www.greeneking.co.uk/pubs/cambridgeshire/granta",
       "phone": "01223 505016",
       "position": {
         "lat": 52.1997,
@@ -404,7 +402,7 @@
       "name": "Grapes",
       "label": "Grapes",
       "address": "19 Histon Rd, Cambridge CB4 3JB",
-      "website": "http://www.thegrapescambridge.co.uk/",
+      "website": "https://www.facebook.com/grapespublichousecambridge",
       "phone": "01223 511974",
       "position": {
         "lat": 52.214963,
@@ -415,7 +413,7 @@
       "name": "Green Dragon",
       "label": "Green Dragon",
       "address": "5 Water St, Cambridge CB4 1NZ",
-      "website": "http://www.greendragon-cambridge.co.uk/",
+      "website": "http://greendragoncambridge.co.uk",
       "phone": "01223 505035",
       "position": {
         "lat": 52.217958,
@@ -459,7 +457,6 @@
       "name": "Hopbine",
       "label": "Hopbine",
       "address": "11-12 Fair St, Cambridge, CB1 1HA",
-      "website": "http://www.thehopbine.co.uk/",
       "phone": "01223 367204",
       "position": {
         "lat": 52.207365,
@@ -471,7 +468,7 @@
       "name": "Hudson's Ale House",
       "label": "Hudson's Ale House",
       "address": "77 High St, Trumpington CB2 9HZ",
-      "website": "http://www.hudsonalehouse.co.uk/",
+      "website": "https://hudsons.pub/",
       "phone": "01223 570042",
       "position": {
         "lat": 52.175125,
@@ -492,7 +489,7 @@
       "name": "Kingston Arms",
       "label": "Kingston Arms",
       "address": "33 Kingston St, Cambridge CB1 2NU",
-      "website": "http://www.kingston-arms.co.uk/",
+      "website": "https://thekingstonarms.co.uk",
       "phone": "01223 319414",
       "position": {
         "lat": 52.200351,
@@ -520,10 +517,10 @@
       }
     },
     "LordByronInn": {
-      "name": "Lord Byron Inn",
-      "label": "Lord Byron Inn",
+      "name": "Meadow Lark",
+      "label": "Meadow Lark",
       "address": "22 Church Ln, Trumpington, Cambridge CB2 9LA",
-      "website": "http://www.lordbyroninn.co.uk/",
+      "website": "https://meadowlarktrumpington.com/",
       "phone": "01223 845102",
       "position": {
         "lat": 52.174461,
@@ -567,12 +564,12 @@
       "name": "Milton Arms",
       "label": "Milton Arms",
       "address": "205 Milton Rd, Cambridge, CB4 1XG",
-      "website": "http://www.hungryhorse.co.uk/locations/milton-arms",
       "phone": "01223 505012",
       "position": {
         "lat": 52.22268,
         "lon": 0.136693
-      }
+      },
+      "closed": true
     },
     "Mitre": {
       "name": "Mitre",
@@ -615,7 +612,8 @@
       "position": {
         "lat": 52.196491,
         "lon": 0.124987
-      }
+      },
+      "website": "https://www.thepantonarms.co.uk/"
     },
     "Petersfield": {
       "name": "Petersfield",
@@ -631,7 +629,7 @@
       "name": "Pickerel",
       "label": "Pickerel",
       "address": "30 Magdalene St, Cambridge CB3 0AF",
-      "website": "http://www.taylor-walker.co.uk/pub/pickerel-cambridge",
+      "website": "https://www.greeneking.co.uk/pubs/cambridgeshire/pickerel-inn",
       "phone": "01223 355068",
       "position": {
         "lat": 52.209955,
@@ -642,7 +640,7 @@
       "name": "Pint Shop",
       "label": "Pint Shop",
       "address": "10 Peas Hill, Cambridge CB2 3PN",
-      "website": "http://pintshop.co.uk/",
+      "website": "http://pintshop.co.uk/locations/cambridge",
       "phone": "01223 352293",
       "position": {
         "lat": 52.204194,
@@ -664,7 +662,7 @@
       "name": "Portland Arms",
       "label": "Portland Arms",
       "address": "129 Chesterton Rd, Cambridge CB4 3BA",
-      "website": "http://www.theportlandarms.co.uk/",
+      "website": "https://theportlandarms.co.uk/",
       "phone": "01223 357268",
       "position": {
         "lat": 52.214426,
@@ -675,7 +673,7 @@
       "name": "Prince Regent",
       "label": "Prince Regent",
       "address": "91 Regent St, Cambridge, CB2 1AW",
-      "website": "http://www.princeregent-cambridge.co.uk/",
+      "website": "https://www.greeneking.co.uk/pubs/cambridgeshire/prince-regent",
       "phone": "01223 505030",
       "position": {
         "lat": 52.199934,
@@ -710,7 +708,6 @@
       "label": "Red Bull",
       "address": "11 Barton Rd, Newnham, Cambridge CB3 9JZ",
       "phone": "01223 300943",
-      "website": "http://the-red-bull.weebly.com/",
       "position": {
         "lat": 52.196487,
         "lon": 0.108657
@@ -742,7 +739,6 @@
       "name": "Rock",
       "label": "Rock",
       "address": "200 Cherry Hinton Rd, Cambridge CB1 7AW",
-      "website": "http://www.rock-cambridge.co.uk/",
       "phone": "01223 505005",
       "position": {
         "lat": 52.187503,
@@ -753,7 +749,6 @@
       "name": "Royal Standard",
       "label": "Royal Standard",
       "address": "292 Mill Rd, Cambridge CB1 3NL",
-      "website": "http://royalstandardcambridge.com/",
       "phone": "01223 569065",
       "position": {
         "lat": 52.197,
@@ -787,7 +782,7 @@
       "label": "Ship",
       "address": "Northfields Ave, Cambridge CB4 2LG",
       "phone": "01223 314445",
-      "website": "http://www.charleswellspubs.co.uk/pub-view/ship-cambs/",
+      "website": "https://www.theshipcambridge.co.uk",
       "position": {
         "lat": 52.231224,
         "lon": 0.128837
@@ -820,7 +815,7 @@
       "label": "St Radegund",
       "address": "129 King St, Cambridge, CB1 1LD",
       "phone": "01223 311794",
-      "website": "http://st-radegund.co.uk/",
+      "website": "https://www.stradegund.co.uk/",
       "position": {
         "lat": 52.207616,
         "lon": 0.126733
@@ -830,7 +825,7 @@
       "name": "Tram Depot",
       "label": "Tram\nDepot",
       "address": "3-5 Dover St, Cambridge CB1 1DY",
-      "website": "https://sites.google.com/site/tramdepotcambs/",
+      "website": "https://thetramcambridge.co.uk/",
       "phone": "01223 324553",
       "position": {
         "lat": 52.204638,
@@ -841,7 +836,7 @@
       "name": "Waterman",
       "label": "Waterman",
       "address": "32 Chesterton Rd, Cambridge CB4 3AX",
-      "website": "http://www.thewaterman-cambridge.co.uk/",
+      "website": "https://www.thewatermancambridge.com/",
       "phone": "01223 323813",
       "position": {
         "lat": 52.214166,
@@ -852,7 +847,7 @@
       "name": "White Swan",
       "label": "White Swan",
       "address": "109 Mill Rd, City Centre, Cambridge CB1 2AZ",
-      "website": "http://www.whiteswancambridge.co.uk/",
+      "website": "https://whiteswanpubcambridge.co.uk",
       "position": {
         "lat": 52.199318,
         "lon": 0.139278
@@ -862,7 +857,7 @@
       "name": "Wrestlers",
       "label": "Wrestlers",
       "address": "Newmarket Rd, Cambridge CB5 8JE",
-      "website": "http://www.thewrestlerscambridge.co.uk/",
+      "website": "https://www.thewrestlerspub.co.uk",
       "phone": "01223 566554",
       "position": {
         "lat": 52.210964,
@@ -1201,7 +1196,6 @@
           "name": "Alex",
           "labelPos": "S"
         },
-
         {
           "coords": [78, 2]
         },
