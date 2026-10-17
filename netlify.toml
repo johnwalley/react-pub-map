@@ -5,4 +5,4 @@
 
 [build.environment]
   # Puppeteer is only needed to regenerate the map locally
-  PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
+  PUPPETEER_SKIP_DOWNLOAD = "true"

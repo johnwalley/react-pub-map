@@ -6,4 +6,4 @@ node ./scripts/create-metadata.js
 node ./scripts/create-pdf.js
 ```
 
-`create-metadata.js` uses Puppeteer, so it needs Chromium. If `npm install` skipped the download, run `node node_modules/puppeteer/install.js`.
+`create-metadata.js` uses Puppeteer, so it needs Chrome. If `npm install` skipped the download, run `npx puppeteer browsers install chrome`.

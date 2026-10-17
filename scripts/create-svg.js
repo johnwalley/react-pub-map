@@ -1,9 +1,22 @@
 #!/usr/bin/env node
-var argv = require("yargs").argv;
+var { parseArgs } = require("util");
 var jsdom = require("jsdom");
 var fs = require("fs");
 var path = require("path");
-var d3 = Object.assign({}, require("d3-selection"), require("d3-tube-map"));
+var d3 = Object.assign({}, require("d3"), require("d3-tube-map"));
+
+var argv = Object.fromEntries(
+  Object.entries(
+    parseArgs({
+      options: Object.fromEntries(
+        ["width", "height", "top", "right", "bottom", "left"].map((name) => [
+          name,
+          { type: "string" },
+        ])
+      ),
+    }).values
+  ).map(([name, value]) => [name, Number(value)])
+);
 
 var dom = new jsdom.JSDOM("<!DOCTYPE html><div></div>");
 
