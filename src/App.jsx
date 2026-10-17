@@ -4,50 +4,41 @@ import "./App.css";
 import {
   Circle,
   ImageOverlay,
-  Map,
+  MapContainer,
   Rectangle,
   ZoomControl,
 } from "react-leaflet";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 
 import { CRS } from "leaflet";
-import Control from "react-leaflet-control";
+import MapControl from "./MapControl";
 import Select from "react-select";
 import imageUrl from "./cambridge-pub-map.svg";
 import metadata from "./cambridge-pub-map.json";
 
 const width = 715.6065;
 const height = 595.28;
-const DEFAULT_VIEWPORT = {
-  center: [height / 2, width / 2],
-  zoom: 1,
-};
+const bounds = [
+  [0, 0],
+  [height, width],
+];
+const MAX_ZOOM = 2;
+
+const pubPosition = (pub) => [height - pub.y, pub.x];
 
 const App = () => {
-  const [viewport, setViewport] = useState(DEFAULT_VIEWPORT);
-  const [selectValue, setSelectValue] = useState("");
-  const select = useRef(null);
+  const [map, setMap] = useState(null);
+  const [selectedPub, setSelectedPub] = useState(null);
 
-  const onPubSelected = (name) => {
-    const pub = metadata.find((pub) => pub.name === name);
-    const point = [height - pub.y, pub.x];
-
-    setViewport({ center: point });
+  const onPubClicked = (pub) => {
+    map.panTo(pubPosition(pub));
   };
 
-  const onClick = (point) => {
-    setViewport({ center: point });
-  };
+  const onPubSelected = (pub) => {
+    setSelectedPub(pub);
 
-  const onViewportChanged = (viewport) => {
-    setViewport(viewport);
-  };
-
-  const updateValue = (newValue) => {
-    setSelectValue(newValue.name);
-
-    if (newValue !== null) {
-      onPubSelected(newValue.name);
+    if (pub !== null) {
+      map.setView(pubPosition(pub), MAX_ZOOM);
     }
   };
 
@@ -65,43 +56,30 @@ const App = () => {
         }}
       >
         <Select
-          id="pub-select"
-          ref={select}
-          valueKey="name"
-          onBlurResetsInput={false}
-          onSelectResetsInput={false}
+          inputId="pub-select"
+          aria-label="Choose a pub"
           autoFocus
           options={metadata}
-          simpleValue
-          clearable={true}
+          getOptionValue={(pub) => pub.name}
+          isClearable
           name="selected-pub"
-          value={selectValue}
-          onChange={updateValue}
-          searchable={true}
-          onValueClick={() => onPubSelected(selectValue.name)}
+          value={selectedPub}
+          onChange={onPubSelected}
           placeholder="Choose a pub..."
         />
       </div>
-      <Map
+      <MapContainer
+        ref={setMap}
         crs={CRS.Simple}
-        viewport={viewport}
-        onViewportChanged={onViewportChanged}
-        maxZoom={2}
+        center={[height / 2, width / 2]}
+        zoom={1}
+        maxZoom={MAX_ZOOM}
         minZoom={0}
-        maxBounds={[
-          [0, 0],
-          [height, width],
-        ]}
+        maxBounds={bounds}
         attributionControl={false}
         zoomControl={false}
       >
-        <ImageOverlay
-          url={imageUrl}
-          bounds={[
-            [0, 0],
-            [height, width],
-          ]}
-        />
+        <ImageOverlay url={imageUrl} bounds={bounds} />
         {metadata.map((pub) => (
           <Rectangle
             key={pub.name}
@@ -112,9 +90,8 @@ const App = () => {
                 pub.bbox.x + pub.bbox.width,
               ],
             ]}
-            opacity={0}
-            fillOpacity={0}
-            onClick={() => onClick([height - pub.y, pub.x])}
+            pathOptions={{ opacity: 0, fillOpacity: 0 }}
+            eventHandlers={{ click: () => onPubClicked(pub) }}
           />
         ))}
         {metadata
@@ -122,20 +99,19 @@ const App = () => {
           .map((pub) => (
             <Circle
               key={pub.name}
-              center={[height - pub.y, pub.x]}
+              center={pubPosition(pub)}
               radius={10}
-              opacity={0}
-              fillOpacity={0}
-              onClick={() => onClick([height - pub.y, pub.x])}
+              pathOptions={{ opacity: 0, fillOpacity: 0 }}
+              eventHandlers={{ click: () => onPubClicked(pub) }}
             />
           ))}
         <ZoomControl position="bottomright" />
-        <Control position="bottomleft">
+        <MapControl position="bottomleft">
           <a href="cambridge-pub-map.pdf" className="button">
             Download PDF
           </a>
-        </Control>
-      </Map>
+        </MapControl>
+      </MapContainer>
     </React.Fragment>
   );
 };
