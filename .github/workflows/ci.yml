@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Puppeteer is only needed to regenerate the map locally
-      PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
+      PUPPETEER_SKIP_DOWNLOAD: "true"
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
