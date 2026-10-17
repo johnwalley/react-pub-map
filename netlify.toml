@@ -1,0 +1,8 @@
+# Node version comes from .nvmrc
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  # Puppeteer is only needed to regenerate the map locally
+  PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
