@@ -6,12 +6,11 @@
     "node": ">=24"
   },
   "dependencies": {
-    "leaflet": "1.7.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-leaflet": "2.8.0",
-    "react-leaflet-control": "2.1.2",
-    "react-select": "5.2.1"
+    "leaflet": "1.9.4",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-leaflet": "5.0.0",
+    "react-select": "5.10.2"
   },
   "scripts": {
     "build:prepare": "./scripts/prepare.sh",
@@ -21,6 +20,9 @@
     "test": "vitest"
   },
   "devDependencies": {
+    "@testing-library/dom": "10.4.2",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.7",
     "@vitejs/plugin-react": "6.1.1",
     "d3": "^6.7.0",
     "d3-selection": "^1.4.2",
@@ -32,11 +34,5 @@
     "vite": "8.3.2",
     "vitest": "5.0.3",
     "yargs": "^17.7.2"
-  },
-  "overrides": {
-    "react-leaflet-control": {
-      "react": "$react",
-      "react-dom": "$react-dom"
-    }
   }
 }
